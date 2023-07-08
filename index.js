@@ -26,7 +26,7 @@ mongoose.connect(process.env.MONGO_URL).then(()=>{
 
 const storage=multer.diskStorage({
     destination:(req,file,cb)=>{
-        cb(null,"images");
+        cb(null,"/images");
     },
     filename:(req,file,cb)=>{
         cb(null,req.body.name);
