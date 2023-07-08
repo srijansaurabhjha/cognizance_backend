@@ -1,5 +1,7 @@
 const express=require("express");
+const cors=require('cors');
 const app=express();
+app.use(cors());
 const dotenv=require("dotenv");
 const mongoose=require('mongoose');
 const authRoute=require("./routes/auth.js");
